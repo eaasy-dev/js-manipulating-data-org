@@ -1,9 +1,11 @@
 import { companiesData } from "./companies-data";
 
 const before = document.getElementById("before");
-before.innerHTML = JSON.stringify(companiesData, null, 2);
-
-const manipulatedData = [];
+console.log(companiesData.length);
+const manipulatedData = companiesData.shift();
+//const manipulatedData = companiesData.pop();
+//const manipulatedData = companiesData[1].fieldData.City;
 //TODO: add the manipulated data array to the 'after' div.
-const after = document.getElementById.ElemementByID("after");
+before.innerHTML = JSON.stringify(companiesData, null, 2);
+const after = document.getElementById("after");
 after.innerHTML = JSON.stringify(manipulatedData,null,2);
